@@ -1,0 +1,109 @@
+/* Apply default styles to all elements */
+/* The * selector applies default styles to all elements, resetting margins and paddings. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set 100% width and height for HTML and body */
+/* html, body sets the width and height of the HTML and body elements to 100%. */
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+/* Styles for the main container */
+/* #main defines styles for the main container, with full width and height, hidden overflow, and relative positioning. */
+#main {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+/* #video1 and #video2 style the two video elements with absolute positioning and z-index to control their stacking order. */
+/* Styles for the first video element */
+#video1 {
+    border: 1px solid white;
+    
+    left: -2.5vw;
+    top: 0;
+    z-index: 1;
+    /* opacity: 1; */
+    position: absolute;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)5s;
+}
+
+/* Styles for the second video element */
+#video2 {
+    border: 1px solid white;
+  
+    right: -2.5vw;
+    top: 0;
+    position: absolute;
+ 
+}
+/* .container styles the container element with positioning, dimensions, background color, z-index, and a transformation for centering. */
+/* Styles for the container element */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 70%;
+    left: 50%;
+    width: 15vw;
+    height: 10vh;
+    /* background-color: aliceblue; */
+    z-index: 2;
+    transform: translate(-50%, 0%);
+}
+/* #drag and .circ styles the draggable element and a circular element with class 'circ' with specified dimensions, border-radius for a circular shape, background colors, and absolute positioning. */
+/* Styles for the draggable element */
+#drag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 5vw;
+    height: 5vw;
+    /* background-color: orange; */
+    position: absolute;
+    border: 2px dotted #fff;
+    /* animation: 5s linear infinite; */
+}
+i{
+   
+    color: #fff;
+    position: absolute;
+}
+/* Styles for the circular element with class 'circ' */
+.circ {
+    animation: golgol linear infinite 10s;
+    border-radius: 50%;
+    width: 1vw;
+    height: 1vw;
+    background-color: orange;
+    position: absolute;
+  
+    
+}
+.circ-parent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    width: 5vw;
+    height: 5vw;
+    /* background-color: aqua; */
+}
+
+@keyframes circle{
+    0%{
+        rotate: -360deg;
+    }
+    100%{
+        rotate: 0deg;
+    }
+}
